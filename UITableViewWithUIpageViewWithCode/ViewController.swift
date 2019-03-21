@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
+    var image: UIImage?
+    var index = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.imageView.image = image
     }
 
-
+    func setupValuesForImage(_ image: UIImage, index: Int) {
+        self.image = image
+        self.index = index
+    }
 }
-
